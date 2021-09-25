@@ -27,7 +27,9 @@ const puppeteer = require('puppeteer');
 
   await browser.close();
 
-  console.log(data);
+  console.log(
+    data.map(card => Object.assign({}, card))
+  );
 
   return data;
 })();
